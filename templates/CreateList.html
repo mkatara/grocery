@@ -1,0 +1,58 @@
+<html>
+<title>Grocery list</title>
+    <body>
+      <form method="POST" align="left">
+
+      <style>
+
+       table, th, td{
+
+        border: 1px solid #333;
+
+       }
+
+      </style>
+      <table>
+          <caption>I am the caption </caption>
+           <tr>
+              <th>NAME </th>
+              <th>QUANTITY  </th>
+              <th>BASKETED YET? </th>
+              <th>PRICE </th>
+              <th>PURCHASED FROM </th>
+           </tr>
+              <tr>
+                <td align="center">
+                  <input type="text" name="item" >
+                </td>
+                <td align="center">
+                  <input type="text" name="QUANTITY" >
+                </td>
+                <td align="center">
+                  <input type="text" name="BASKETED" >
+                </td>
+                <td align="center">
+                  <input type="text" name="price" >
+                </td>
+                <td align="center">
+                  <input type="text" name="PURCHASEDFROM" >
+                </td>
+            </tr>
+            {% for items in listitems%}
+            <tr>
+              <td align="center">{{items[0]}}</td>
+              <td align="center">{{items[1]}}</td>
+              <td align="center">{{items[2]}}</td>
+              <td align="center">{{items[3]}}</td>
+              <td align="center">{{items[4]}}</td>
+            </tr>
+            {%endfor%}
+
+      </table>
+
+      <input type="submit" name="Add to List">
+
+    </form>
+
+          <a href="http://127.0.0.1:5000/showReport.html" align='left'>Show Report</a>
+</html>

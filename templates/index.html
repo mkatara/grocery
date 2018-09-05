@@ -1,0 +1,16 @@
+<html>
+<title>Grocery list</title>
+    <body>
+        <h1 align="center">This is a smarter way to do my Grocery </h1>
+        <ul align="center" class="unstyled">
+          {%for veggie in items%}
+          <li> {{ veggie }}
+          {%endfor%}
+        </ul>
+        <form method="POST" align="center">
+          <input align="center" type="text" name="item" >
+          <input align="center" type="submit" name="Add to List">
+        </form>
+    </body>
+    <a href="http://127.0.0.1:5000/showReport.html" align='left'>Show Report</a>
+</html>
