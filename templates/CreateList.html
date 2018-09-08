@@ -17,7 +17,7 @@
            <tr>
               <th>NAME </th>
               <th>QUANTITY  </th>
-              <th>BASKETED YET? </th>
+              <th>BASKETED?</th>
               <th>PRICE </th>
               <th>PURCHASED FROM </th>
            </tr>
@@ -29,7 +29,7 @@
                   <input type="text" name="QUANTITY" >
                 </td>
                 <td align="center">
-                  <input type="text" name="BASKETED" >
+                  <input type="text" name="BASKETED" VALUE = "N" >
                 </td>
                 <td align="center">
                   <input type="text" name="price" >
@@ -54,5 +54,5 @@
 
     </form>
 
-          <a href="http://127.0.0.1:5000/showReport.html" align='left'>Show Report</a>
+          <a href="{{ url_for('showReport')}}" align='left'>Show Report</a>
 </html>
