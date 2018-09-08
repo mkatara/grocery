@@ -14,12 +14,15 @@
   <table>
       <caption>I am the caption </caption>
        <tr>
+         <th> List ID</th>
           <th> ITEMS Purchased </th>
           <th> QUANTITY </th>
           <th> BASKETED YET? </th>
           <th> PRICE </th>
           <th> PURCHASED FROM </th>
           <th> DATE OF PURCHASE </th>
+          <th> LIST OPEN? </th>
+          <th> Close list? </th>
        </tr>
           {%for r in itemset%}
           <tr>
@@ -29,6 +32,9 @@
             <td align="center">{{r[3]}}</td>
             <td align="center">{{r[4]}}</td>
             <td align="center">{{r[5]}}</td>
+            <td align="center">{{r[6]}}</td>
+            <td align="center">{{r[7]}}</td>
+            <td align="center"><a href="{{ url_for('closeList',lstid=r[0]) }}">Close List</a></td>
           </tr>
           {%endfor%}
 
